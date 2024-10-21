@@ -14,6 +14,7 @@ public class MainPageTest extends BaseUITest{
     public MainPageTest(String question, String answer){
         this.question = question;
         this.answer = answer;
+        super.browser = "Chrome";
     }
 
     @Parameterized.Parameters
@@ -31,7 +32,7 @@ public class MainPageTest extends BaseUITest{
     }
 
     @Test
-    public void checkQuestionAndAnswerChromeTest(){
+    public void checkQuestionAndAnswerTest(){
         MainPage mainPage = new MainPage(driver);
         mainPage.openMainPage();
         mainPage.cookieButtonClick();
